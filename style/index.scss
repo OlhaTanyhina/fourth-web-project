@@ -1,0 +1,287 @@
+@import 'reset';
+
+$white: rgba(255, 255, 255, 0.7);
+
+body {
+	background: url(../img/bg-image.png) no-repeat center center / cover;
+	
+	padding: 85px;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	margin-top: 260px;
+	margin-bottom: 260px;
+
+	display: flex;
+	justify-content: center;
+
+	color: $white;
+
+	padding-left: 100px;
+	padding-right: 50px;
+
+	/* width: 100%; */
+}
+
+.audio {
+	width: 50%;
+	/* width: 1240px; */
+	margin-right: 100px; 
+
+		&-list {
+			/* padding: 10px; */
+			
+			/* list-style: decimal;
+			list-style-position: inside; */
+
+				li {
+					/* display: list-item; */
+
+					/* height: 80px; */
+
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					border-bottom: 1px solid $white;
+
+					padding: 10px;
+
+					&:last-child {
+						border-bottom: none;
+					}
+						
+						.track {
+							width: 400px;
+						
+							display: flex;
+							align-items: center;
+
+							margin-right: 25px;
+
+							&__nomer {
+								font-size: 26px;
+								font-weight: 400;
+								padding-right: 30px;
+							}
+
+							.track__nomer--volume {
+								width: 12px;
+								height: 10px;
+								padding-right: 25px;
+							}
+
+								p {
+									font-size: 26px;
+									font-weight: 700;
+									line-height: 32px;
+									font-family: sans-serif;
+
+									padding-left: 20px;
+
+									span {
+										font-size: 24px;
+										font-weight: 400;
+									}
+								}
+						}
+
+						.like {
+							width: 50px;
+						}
+					
+				}	
+		}
+}
+
+.current-audio {
+	/* width: 40%; */
+
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+
+	figure {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		margin: 0;
+
+		figcaption {
+			width: 70%;
+
+			padding-left: 25px;
+			padding-right: 25px;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			p {
+				font-size: 26px;
+				font-weight: 700;
+				line-height: 32px;
+				font-family: sans-serif;
+
+					span {
+						font-size: 24px;
+						font-weight: 400;
+					}
+			}
+		}
+	}
+}
+
+.fa-heart,
+.fa-chevron-circle-right {
+	color: $white;
+}
+
+.fa-chevron-circle-right {
+	padding-left: 10px;
+}
+
+footer {
+	margin-top: 255px;
+
+	.player {
+		display: flex;
+		justify-content: space-between;
+
+		color: $white;
+
+		&__controls-buttons {
+			display: flex;
+			align-items: center;
+
+			margin-right: 20px;			
+			/* width: 11%; */
+			
+			&--prev {
+				
+				/* img {
+					width: 12px;
+					height: 14px;
+				} */
+			}
+
+			&--stop {
+				margin-right: 85px;
+				margin-left: 85px;
+
+				/* img {
+					width: 18px;
+					height: 24px;
+				} */
+			}
+
+			&--next {
+
+				/* img {
+					width: 12px;
+					height: 14px;
+				} */
+			}
+		}
+
+		&__timeline {
+			display: flex;
+			flex-direction: column;
+			/* justify-content: center; */
+			align-items: center;
+
+			/* width: 43%; */
+
+			.current-track {
+				font-size: 26px;
+				font-weight: 500;
+				line-height: 16px;
+				font-family: sans-serif;
+
+				margin-bottom: 10px;
+
+					span {
+						font-size: 24px;
+						font-weight: 400;
+					}
+			}
+			
+			.line-track {
+				display: flex;
+				justify-content: space-around;
+
+				&__time {
+					font-size: 22px;
+					font-weight: 400;
+					line-height: 32px;
+				}
+
+				&__line {
+					width: 470px;
+					border-top: 8px solid rgba(255, 255, 255, .15);
+
+					margin-top: 10px;
+					margin-right: 25px;
+					margin-left: 25px;
+
+					&--load {
+						margin-top: -8px;
+
+						border-top: 8px solid rgba(255, 255, 255, .3);
+
+						width: 262px;
+					}
+
+					&--passed {
+						margin-top: -8px;
+
+						border-top: 8px solid #ff643b;
+
+						width: 209px;
+					}
+				}				
+			}
+		}
+
+		&__mode {
+			/* width: 11%; */
+			display: flex;
+			align-items: center;
+
+			margin-left: 20px;
+
+			.volume {
+				margin-right: 125px;
+
+				/* width: 17px;
+				height: 13px; */
+			}
+
+			.shuffle {
+				margin-right: 45px;
+
+				/* width: 17px;
+				height: 13px; */
+			}
+
+			/* .replay {
+				width: 17px;
+				height: 13px;
+			} */
+		}
+	}
+}
+
+/* .fa-step-backward {
+	width: 24px
+	height: 28px;
+} */
+
+@import 'media';
